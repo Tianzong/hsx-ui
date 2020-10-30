@@ -1,0 +1,20 @@
+@import "../common/var";
+// 不同的按钮 的形状
+@mixin button-size($padding, $font-size, $border-radius){
+  padding: $padding;
+  font-size: $font-size;
+  border-radius: $border-radius;
+}
+
+// 不同的按钮 的颜色
+@mixin button-variant($color, $background-color, $border-color) {
+  color: $color;
+  background-color: $background-color;
+  border-color: $border-color;
+
+  &:hover,
+  &:focus {
+    color: $color;
+    background: mix($color-white, $background-color, $button-hover-tint-percent);
+  }
+}

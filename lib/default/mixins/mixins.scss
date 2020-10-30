@@ -1,0 +1,35 @@
+@import "config";
+@import "../common/var";
+
+// 添加 命名前缀
+@mixin base($block) {
+  $basename: $namespace + '-' + $block !global;
+
+  .#{$basename} {
+    @content;
+  }
+}
+
+// 在根目录 有当前选择器 且同时拥有state的选择器
+@mixin when($state) {
+  @at-root {
+    &.#{$state-prefix + $state} {
+      @content;
+    }
+  }
+}
+
+// 根据当前选择器和传入的参数 在根目录生成选择器
+@mixin merge-to-root($modifier) {
+  $current-selector: &;
+  $selector: "";
+  @each $unit in $modifier {
+    $selector: #{$selector + & + $modifier-separator + $unit + ','}
+  }
+
+  @at-root {
+    #{$selector} {
+      @content;
+    }
+  }
+}

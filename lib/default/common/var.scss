@@ -1,0 +1,83 @@
+/* color
+-------------------------- */
+// 主颜色
+$color-primary: #469eff !default;
+// 背景颜色
+$color-white: #fff;
+$color-black: #000;
+$color-primary-light-1: mix($color-white, $color-primary, 10%);
+$color-primary-light-2: mix($color-white, $color-primary, 20%);
+$color-primary-light-3: mix($color-white, $color-primary, 30%);
+$color-primary-light-4: mix($color-white, $color-primary, 40%);
+$color-primary-light-5: mix($color-white, $color-primary, 50%);
+$color-primary-light-6: mix($color-white, $color-primary, 60%);
+$color-primary-light-7: mix($color-white, $color-primary, 70%);
+$color-primary-light-8: mix($color-white, $color-primary, 80%);
+$color-primary-light-9: mix($color-white, $color-primary, 90%);
+// 文本
+$color-text-placeholder:#C0C4CC !default;
+// border
+$border-base-color: #DCDFE6 !default;
+
+$primary-color: #409eff;
+$success-color: #67c23a;
+$info-color: #909399;
+$warn-color: #e6a23c;
+$danger-color: #f56c6c;
+
+/* font
+-------------------------- */
+$font-size-extra-large: 20px !default;
+$font-size-large: 18px !default;;
+$font-size-medium: 16px !default;
+$font-size-base: 14px !default;
+$font-size-small: 13px !default;
+$font-size-extra-small: 12px !default;
+$font-size-mini: 12px !default;
+
+$font-weight-primary: 500 !default;
+$font-weight-secondary: 100 !default;
+
+/* border
+-------------------------- */
+$border-base-width-base: 1px !default;
+$border-style-base: solid !default;
+$border-base: $border-base-width-base $border-style-base $border-base-color;
+
+/* Button
+-------------------------- */
+// 布局 字体 盒模型
+$button-font-size: $font-size-base;
+$button-font-weight: $font-weight-primary;
+$button-border-radius: 5px;
+$button-padding-vertical: 12px;
+$button-padding: 12px 20px;
+
+$button-medium-font-size: $font-size-base;
+$button-medium-vertical-padding: 10px;
+$button-medium-padding:$button-padding-vertical 20px;
+$button-medium-border-radius: 5px;
+
+$button-small-font-size: $font-size-small;
+$button-small-vertical-padding: 9px;
+$button-small-padding:$button-small-vertical-padding 15px;
+$button-small-border-radius: 5px;
+
+$button-mini-font-size: $font-size-mini;
+$button-mini-vertical-padding: 7px;
+$button-mini-padding:$button-mini-vertical-padding 12px;
+$button-mini-border-radius: 5px;
+
+// 颜色
+$button-hover-tint-percent: 20% !default;
+
+$button-default-background-color: $color-white;
+$button-primary-background-color: $color-primary;
+$button-success-background-color: $success-color;
+$button-warning-background-color: $warn-color;
+$button-danger-background-color: $danger-color;
+$button-info-background-color: $info-color;
+
+$button-disabled-font-color: $color-text-placeholder;
+$button-disabled-background-color: $color-white;
+$button-disabled-border-color: $color-white

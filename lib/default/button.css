@@ -1,0 +1,53 @@
+:root {
+  /* Color
+  -------------------------- */
+  --primary-color: #409eff;
+  --success-color: #67c23a;
+  --info-color: #909399;
+  --warn-color: #e6a23c;
+  --danger-clor: #f56c6c;
+  /* Button
+  -------------------------- */
+  --button-font-size: 14px;
+  --button-border-radius: 5px;
+  --button-padding: 10px 15px;
+  --button-large-font-size: 16px;
+  --button-large-padding: 11px 19px;
+}
+.hsx-button {
+  font-size: var(--button-font-size);
+  padding: var(--button-padding);
+  border-radius: var(--button-border-radius);
+  border: 1px solid #dcdfe6;
+  background-color: #ffffff;
+}
+.is-round {
+  border-radius: 20px;
+}
+.is-circle {
+  border-radius: 50%;
+  padding: 12px;
+}
+.hsx-button-info,
+.hsx-button-primary,
+.hsx-button-danger,
+.hsx-button-warn {
+  color: #ffffff;
+}
+.hsx-button-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+.hsx-button-info {
+  background-color: var(--info-color);
+  border-color: var(--info-color);
+}
+.hsx-button-warn {
+  background-color: var(--warn-color);
+  border-color: var(--warn-color);
+}
+.hsx-button-danger {
+  background-color: var(--danger-clor);
+  border-color: var(--danger-clor);
+}
+/*# sourceMappingURL=button.css.map */

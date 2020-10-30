@@ -1,0 +1,95 @@
+@charset "UTF-8";
+@import "common/var";
+@import "mixins/button";
+@import "mixins/mixins";
+
+@include base(button) {
+  // hsx-button
+  display: inline-block;
+  line-height: 1;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: $button-default-background-color;
+  text-align: center;
+  transition: 0.1s;
+  border: $border-base;
+  outline: none;
+
+  // 根据不同的按钮生成 padding, font-size, border-radiu
+  @include button-size($button-padding, $button-font-size, $button-border-radius);
+
+  /* 伪类
+  ******** */
+  &:hover{
+    color: $color-primary;
+    border-color:  $color-primary-light-7;
+    background-color: $color-primary-light-9;
+  }
+
+  &:active {
+    outline: none; // 去除点击元素后的边框线
+  }
+
+  &::-moz-focus-inner {
+    border: 0; // 针对火狐的点击边框线
+  }
+
+  @include when(disabled) {
+    &,
+    &:hover,
+    &:focus {
+      color: $button-disabled-font-color;
+      cursor: not-allowed;
+      background-color: $button-disabled-background-color !important;
+      border-color: $button-disabled-border-color !important;
+    }
+  }
+
+  @include when(round) {
+    border-radius: 20px;
+    padding: 12px 23px;
+  }
+
+  @include when(circle) {
+    border-radius: 50%;
+    padding: $button-padding-vertical;
+  }
+
+  // hsx-button-primary
+  @include merge-to-root(primary) {
+    @include button-variant($color-white, $button-primary-background-color, $button-primary-background-color);
+  }
+
+  @include merge-to-root(danger) {
+    @include button-variant($color-white, $button-danger-background-color, $button-danger-background-color);
+  }
+
+  @include merge-to-root(warning) {
+    @include button-variant($color-white, $button-warning-background-color, $button-warning-background-color);
+  }
+
+  @include merge-to-root(info) {
+    @include button-variant($color-white, $button-info-background-color,$button-info-background-color);
+  }
+
+  @include merge-to-root(medium) {
+    @include button-size($button-padding, $button-medium-font-size, $button-medium-border-radius);
+  }
+
+  @include merge-to-root(small) {
+    @include button-size($button-small-padding, $button-small-font-size, $button-small-border-radius);
+  }
+
+  @include merge-to-root(mini) {
+    @include button-size($button-mini-padding, $button-mini-font-size, $button-mini-border-radius);
+  }
+}
+
+@include base(button-group) {
+  display: flex;
+
+  & > .hsx-button {
+    vertical-align: middle;
+  }
+}
+
