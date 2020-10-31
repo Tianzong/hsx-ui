@@ -9,7 +9,3 @@
     name: "hsxButtonGroup"
   }
 </script>
-
-<style scoped>
-
-</style>

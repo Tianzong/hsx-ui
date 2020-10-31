@@ -1,13 +1,15 @@
 import hsxTest from "./test"
 import hsxButton from "./button"
 import hsxButtonGroup from "./buttonGroup"
+import hsxRadio from "./radio"
 
 import "../lib/default/index.scss"
 
 const components = [
   hsxTest,
   hsxButton,
-  hsxButtonGroup
+  hsxButtonGroup,
+  hsxRadio
 ]
 
 let install = function (Vue) {

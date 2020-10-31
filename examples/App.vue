@@ -1,23 +1,34 @@
 <template>
   <div id="app">
     <h2>按钮</h2>
-    <hsx-button>默认按钮</hsx-button>
-    <hsx-button type="primary">主要按钮</hsx-button>
-    <hsx-button type="primary" :button-disabled="true">禁用按钮</hsx-button>
-    <hsx-button type="danger">危险按钮</hsx-button>
-    <hsx-button type="warning">警告按钮</hsx-button>
-    <hsx-button type="info">信息按钮</hsx-button>
-    <hsx-button type="primary" :is-round="true" class="icon hsx-icon-left">圆角按钮</hsx-button>
-    <hsx-button type="primary" button-size="medium">medium按钮</hsx-button>
-    <hsx-button type="primary" button-size="small">small按钮</hsx-button>
-    <hsx-button type="primary" button-size="mini">mini按钮</hsx-button>
-    <hsx-button :is-circle="true"></hsx-button>
+    <div class="button-container">
+      <hsx-button>默认按钮</hsx-button>
+      <hsx-button type="primary">主要按钮</hsx-button>
+      <hsx-button type="primary" :button-disabled="true">禁用按钮</hsx-button>
+      <hsx-button type="danger">危险按钮</hsx-button>
+      <hsx-button type="warning">警告按钮</hsx-button>
+      <hsx-button type="info">信息按钮</hsx-button>
+      <hsx-button type="primary" :is-round="true" class="icon hsx-icon-left">圆角按钮</hsx-button>
+      <hsx-button type="primary" button-size="medium">medium按钮</hsx-button>
+      <hsx-button type="primary" button-size="small">small按钮</hsx-button>
+      <hsx-button type="primary" button-size="mini">mini按钮</hsx-button>
+      <hsx-button :is-circle="true"></hsx-button>
+    </div>
     <h2>按钮组</h2>
+
+    <hsx-button-group>
+      <hsx-button type="primary">左边</hsx-button>
+      <hsx-button type="primary">中间</hsx-button>
+      <hsx-button type="primary">右边</hsx-button>
+    </hsx-button-group>
     <hsx-button-group>
       <hsx-button>左边</hsx-button>
-      <hsx-button>中间</hsx-button>
       <hsx-button>右边</hsx-button>
     </hsx-button-group>
+
+    <h2>表单</h2>
+    <h3>radio</h3>
+    <hsx-radio></hsx-radio>
   </div>
 </template>
 
@@ -52,6 +63,14 @@
     border-radius: 5px;
     line-height: 30px;
     margin-right: 20px;
+  }
+
+  .button-container .hsx-button {
+    margin-left: 10px;
+  }
+
+  .hsx-button-group {
+    margin-left: 20px;
   }
 
 </style>

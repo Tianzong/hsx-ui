@@ -1,0 +1,58 @@
+@import "common/var";
+@import "mixins/mixins";
+
+@include block(radio) {
+  display: inline-block;
+  color: $radio-font-color;
+  font-weight: $radio-font-weight;
+  line-height: 1;
+  outline: none;
+  margin-right: 30px;
+  position: relative;
+
+  @include element(input) {
+    white-space: nowrap;
+    outline: none;
+    display: inline-block;
+    line-height: 1;
+    vertical-align: middle;
+    position: relative;
+  }
+
+  @include element(inner) {
+    position: relative;
+    border: 1px solid #DCDFE6;
+    border-radius: 100%;
+    width: 14px;
+    height: 14px;
+    display: inline-block;
+    box-sizing: border-box;
+
+    &::after {
+      width: 4px;
+      height: 4px;
+      border-radius: 100%;
+      background-color: #FFFFFF;
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      transition: transform .15s ease-in;
+    }
+  }
+
+  @include element(origin) {
+    opacity: 0;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  @include element(label) {
+    padding-left: 10px;
+  }
+}
